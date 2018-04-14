@@ -9,5 +9,6 @@
     * `/.git`
     * `/robots.txt`
     * `/citemap.txt`
+    * `/.DS_Store`
     * `?DEBUG=True`
 6. Header fields
