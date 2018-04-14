@@ -12,3 +12,6 @@
     * `/.DS_Store`
     * `?DEBUG=True`
 6. Header fields
+
+
+https://gchq.github.io/CyberChef/ 
