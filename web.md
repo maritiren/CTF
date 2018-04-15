@@ -12,6 +12,17 @@
     * `/.DS_Store`
     * `?DEBUG=True`
 6. Header fields
+7. Finne alle mulige steder å sende input
+8. Prøv å få respons
 
 
-https://gchq.github.io/CyberChef/ 
+## Diverse
+* https://gchq.github.io/CyberChef/ 
+* command injection
+* beautifulsoup python for å hente ut div stuff fra nettsider
+* reverse shell
+
+## File uploads:
+* insecure file upload : https://www.sans.org/reading-room/whitepapers/testing/web-application-file-upload-vulnerabilities-36487
+* Image Tragic
+* 
