@@ -26,4 +26,10 @@
 * insecure file upload : https://www.sans.org/reading-room/whitepapers/testing/web-application-file-upload-vulnerabilities-36487
 * Konvertering mellom filformater
    * Image Tragic
+   * unsafe unzip
 * 
+
+## API
+* signature/token (auth shit)
+* scopes
+* finne ut allowed HTTP request typer
