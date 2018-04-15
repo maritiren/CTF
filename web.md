@@ -24,5 +24,6 @@
 
 ## File uploads:
 * insecure file upload : https://www.sans.org/reading-room/whitepapers/testing/web-application-file-upload-vulnerabilities-36487
-* Image Tragic
+* Konvertering mellom filformater
+   * Image Tragic
 * 
