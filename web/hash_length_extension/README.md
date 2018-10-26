@@ -1,7 +1,7 @@
 # Hash Length Extension
 In hash length extension, a vulnerability in SHA1 and SHA2
-let us add some data at the end of a hash without knowing the
-secret. 
+allows us to add some data at the end of a hash without knowing 
+the secret. 
 
 You may recognise this type of task if the web server does 
 hash validation like this:
