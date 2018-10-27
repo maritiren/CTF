@@ -40,8 +40,8 @@ be returned. At least a new page getting you further in the task:
 import subprocess
 
 for i in range(1,20):
-    hash_extender_input = "./hash_extender --data 'known data from server'"
-    hash_extender_input += "-s e20e4f2703891bfa49c2a84dbe7ce125d716be28d44e82209db28fb97e0718fc38ea79947189d5ddcb8c83a1de443cae4bd95077a1b0abe6b83b18767c1f8584"
+    hash_extender_input = "./hash_extender --data 'known data from server' "
+    hash_extender_input += "-s e20e4f2703891bfa49c2a84dbe7ce125d716be28d44e82209db28fb97e0718fc38ea79947189d5ddcb8c83a1de443cae4bd95077a1b0abe6b83b18767c1f8584 "
     hash_extender_input += "--append 'data to append to get access' -l {} --out-data-format=html -f sha512".format(i)
     hash_extender_output = subprocess.check_output(hash_extender_input, shell=True)
 
@@ -55,6 +55,9 @@ for i in range(1,20):
     response = subprocess.check_output('curl -H "data:{}" -H "hash:{}" https://url.here.ctf/admin'.format(new_data, new_hash), shell=True)
     print response
 ```
+
+Note that the variable **new_hash** is always the same, while the variable
+**new_data** will differ in each iteration.
 
 ## Tools:
 * https://github.com/iagox86/hash_extender 
