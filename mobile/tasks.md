@@ -16,9 +16,23 @@ to store user’s settings and application data.
 
 #### Task 2: 
 1. Where are the database(s) for this application located?
-6. Dump all the tables
 2. Copy the database out of the device
 3. What type of database is this?
 4. Dump the schema
 5. List all tables
 6. Dump all the tables
+
+## Insecure communication
+
+### Exploiting insecure communication
+
+### Task 1: Insecure Communication
+What happens when you log in?
+1. What protocol is used?
+2. Is it encrypted?
+3. Can you see any sensitive data?
+4. Can you identify other API endpoints?
+
+Forging requests
+1. Can you change the password of `dinesh` without logging in first?
+2. Any other requests you can forge?
