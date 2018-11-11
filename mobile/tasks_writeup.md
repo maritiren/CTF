@@ -6,7 +6,8 @@ This file contains tasks related to Android mobile reversing.
 ### Exploiting local data storage
 
 #### Task 1: Find and read the Android Shared Preferences
-1. Find the package name
+_1. Find the package name_
+
 This requires root. With images that use Google APIs,
 you may easily get root by entering the following command:
 ```
@@ -23,7 +24,8 @@ generic_x86:/ $ su
 generic_x86:/ # pm list packages | grep <packagename>
 ```
 
-2. Copy all preferences to your machine.
+_2. Copy all preferences to your machine._
+
 Often you would like to have files locally on your machine,
 and not on the device you are reversing. To do this, you
 need root on the device. However, using _su_ will not do the
@@ -39,7 +41,8 @@ to you local machine:
 $ adb pull /data/data/<package_name>/shared_prefs/<preference_file>.xml
 ```
 
-3. Does the file contain anything juicy?
+_3. Does the file contain anything juicy?_
+
 Hellz yeah, it does!
 ```bash
 Android-InsecureBankv2> cat .\mySharedPreferences.xml
