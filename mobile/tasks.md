@@ -11,6 +11,7 @@ to store user’s settings and application data.
 
 #### Task 1: Find and read the Android Shared Preferences
 1. Find the package name 
-2. Copy all preferences to you machine.
+2. Copy all preferences to your machine.
+3. Does the file contain anything juicy?
 
 #### Task 2: 
