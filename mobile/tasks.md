@@ -14,7 +14,7 @@ to store user’s settings and application data.
 2. Copy all preferences to your machine.
 3. Does the file contain anything juicy?
 
-#### Task 2: 
+#### Task 2: Exploring databases
 1. Where are the database(s) for this application located?
 2. Copy the database out of the device
 3. What type of database is this?
