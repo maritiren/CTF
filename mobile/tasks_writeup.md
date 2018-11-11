@@ -6,7 +6,7 @@ This file contains tasks related to Android mobile reversing.
 ### Exploiting local data storage
 
 #### Task 1: Find and read the Android Shared Preferences
-_1. Find the package name_
+1. Find the package name
 
 This requires root. With images that use Google APIs,
 you may easily get root by entering the following command:
@@ -24,7 +24,7 @@ generic_x86:/ $ su
 generic_x86:/ # pm list packages | grep <packagename>
 ```
 
-_2. Copy all preferences to your machine._
+2. Copy all preferences to your machine.
 
 Often you would like to have files locally on your machine,
 and not on the device you are reversing. To do this, you
@@ -41,7 +41,7 @@ to you local machine:
 $ adb pull /data/data/<package_name>/shared_prefs/<preference_file>.xml
 ```
 
-_3. Does the file contain anything juicy?_
+3. Does the file contain anything juicy?
 
 Hellz yeah, it does!
 ```bash
@@ -55,12 +55,15 @@ Android-InsecureBankv2> cat .\mySharedPreferences.xml
 
 #### Task 2: 
 1. Where are the database(s) for this application located?
+
 `/data/data/com.android.insecurebankv2/databases`
 
 2. Copy the database out of the device
+
 `adb pull /data/data/com.android.insecurebankv2/databases .`
 
 3. What type of database is this?
+
 SQLite 3:
 ```bash
 $ cd databases
