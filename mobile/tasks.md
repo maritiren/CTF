@@ -36,3 +36,13 @@ What happens when you log in?
 Forging requests
 1. Can you change the password of `dinesh` without logging in first?
 2. Any other requests you can forge?
+
+## Extraneous Functionality
+
+### Exploiting Extraneous Functionality
+
+#### Task 1: Extraneous Functionality
+1. Can you find any backdoors or other developer tools left in the app?
+2. What can these be used for?
+3. If they pose a security risk, what would you do to fix it?
+4. Enable debugging on an app that doesn't have it enabled by default.

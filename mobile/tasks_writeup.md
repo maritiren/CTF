@@ -168,3 +168,49 @@ $ curl -d "username=dinesh&password=lol" http://192.168.1.105:8888/login
 We can forge all requests to the server, as there's no checks in place to make
 sure that we are logged in. We could transfer money between two accounts, for
 example!
+
+## Extraneous Functionality
+
+#### Task 1: Extraneous Functionality
+1. Can you find any backdoors or other developer tools left in the app?
+After decompiling the source code, e.g. using jadx, we can see that there is a
+hidden endpoint at `/devlogin`. Here's an excerpt of the code:
+```Java
+public void postData(String valueIWantToSend) throws ClientProtocolException, IOException, JSONException, InvalidKeyException, NoSuchAlgorithmException, NoSuc
+hPaddingException, InvalidAlgorithmParameterException, IllegalBlockSizeException, BadPaddingException {
+	HttpResponse responseBody;
+	HttpClient httpclient = new DefaultHttpClient();
+	StringBuilder stringBuilder = new StringBuilder();
+	stringBuilder.append(DoLogin.this.protocol);
+	stringBuilder.append(DoLogin.this.serverip);
+	stringBuilder.append(":");
+	stringBuilder.append(DoLogin.this.serverport);
+	stringBuilder.append("/login");
+	HttpPost httppost = new HttpPost(stringBuilder.toString());
+	StringBuilder stringBuilder2 = new StringBuilder();
+	stringBuilder2.append(DoLogin.this.protocol);
+	stringBuilder2.append(DoLogin.this.serverip);
+	stringBuilder2.append(":");
+	stringBuilder2.append(DoLogin.this.serverport);
+	stringBuilder2.append("/devlogin");
+	HttpPost httppost2 = new HttpPost(stringBuilder2.toString());
+	List<NameValuePair> nameValuePairs = new ArrayList(2);
+	nameValuePairs.add(new BasicNameValuePair("username", DoLogin.this.username));
+	nameValuePairs.add(new BasicNameValuePair("password", DoLogin.this.password));
+	if (DoLogin.this.username.equals("devadmin")) {
+		httppost2.setEntity(new UrlEncodedFormEntity(nameValuePairs));
+		responseBody = httpclient.execute(httppost2);
+	} else {
+		httppost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
+		responseBody = httpclient.execute(httppost);
+	}
+	[...]
+}
+```
+If you supply `devadmin` as the username, you will simply be logged in without
+having to enter a password
+
+2. What can these be used for?
+
+3. If they pose a security risk, what would you do to fix it?
+4. Enable debugging on an app that doesn't have it enabled by default.
