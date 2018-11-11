@@ -15,3 +15,10 @@ to store user’s settings and application data.
 3. Does the file contain anything juicy?
 
 #### Task 2: 
+1. Where are the database(s) for this application located?
+6. Dump all the tables
+2. Copy the database out of the device
+3. What type of database is this?
+4. Dump the schema
+5. List all tables
+6. Dump all the tables
