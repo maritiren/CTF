@@ -53,7 +53,7 @@ Android-InsecureBankv2> cat .\mySharedPreferences.xml
 </map>
 ```
 
-#### Task 2: 
+#### Task 2: Exploit database
 1. Where are the database(s) for this application located?
 
 `/data/data/com.android.insecurebankv2/databases`
@@ -104,8 +104,9 @@ INSERT INTO android_metadata VALUES('en_US');
 COMMIT;
 ```
 
+---
 
-### Exploiting database storage
+### Exploiting insecure communication
 To solve all of the following tasks, Burp Suite was used to intercept all the
 traffic coming from the Android emulator. To do this, first install Burp. Open
 Burp and click the `Proxy` tab. Ensure that intercept is `on`. To make the app
@@ -171,7 +172,7 @@ example!
 
 ## Extraneous Functionality
 
-#### Task 1: Extraneous Functionality
+#### Task 1: Find the backdoors
 1. Can you find any backdoors or other developer tools left in the app?
 After decompiling the source code, e.g. using jadx, we can see that there is a
 hidden endpoint at `/devlogin`. Here's an excerpt of the code:
