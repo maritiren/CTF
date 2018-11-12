@@ -105,7 +105,7 @@ COMMIT;
 ```
 
 
-### Task 1
+### Exploiting database storage
 To solve all of the following tasks, Burp Suite was used to intercept all the
 traffic coming from the Android emulator. To do this, first install Burp. Open
 Burp and click the `Proxy` tab. Ensure that intercept is `on`. To make the app
