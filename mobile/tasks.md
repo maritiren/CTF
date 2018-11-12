@@ -22,6 +22,8 @@ to store user’s settings and application data.
 5. List all tables
 6. Dump all the tables
 
+---
+
 ## Insecure communication
 
 ### Exploiting insecure communication
@@ -36,6 +38,8 @@ What happens when you log in?
 Forging requests
 1. Can you change the password of `dinesh` without logging in first?
 2. Any other requests you can forge?
+
+---
 
 ## Extraneous Functionality
 
