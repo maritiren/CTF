@@ -1,6 +1,31 @@
 # Tasks
 This file contains tasks related to Android mobile reversing.
 
+---
+
+## Getting started in 1-2-3
+
+#### Task 1: Download APK
+Go to https://github.com/dineshshetty/Android-InsecureBankv2 
+and clone or download to InsecureBankv2 APK.
+
+#### Task 2: Unzip APK file
+APK's are zipped files. Rename the APK so that it has the
+_.zip_ file extension, and unzip the file. Open 
+`AndroidManifest.xml`. Is it readable?
+
+#### Task 3: Decompile APK
+Decompile APK to get readable code using _apktool_. Now, 
+open _AndroidManifest.xml_. Can you read anything now? Open 
+some code files as well. Do you recognise the language?
+
+#### Task 4: Extract java source code
+Extract Java source code from the APK using _jadx-gui_.
+Now you are ready to find some juicy information by doing
+some mobile app reversing!! Whoop whoop!
+
+---
+
 ## Insecure data storage
 
 ### Exploiting local data storage
