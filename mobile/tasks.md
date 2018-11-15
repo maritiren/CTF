@@ -15,14 +15,28 @@ _.zip_ file extension, and unzip the file. Open
 `AndroidManifest.xml`. Is it readable?
 
 #### Task 3: Decompile APK
-Decompile APK to get readable code using _apktool_. Now, 
-open _AndroidManifest.xml_. Can you read anything now? Open 
-some code files as well. Do you recognise the language?
+Decompile APK to get readable code using **apktool**. Open the 
+project folder in **Android Studio**. Now, open the
+_AndroidManifest.xml_ file. Can you read anything now? Open 
+some code files as well. Do you recognize the language?
 
 #### Task 4: Extract java source code
-Extract Java source code from the APK using _jadx-gui_.
+Extract Java source code from the APK using **jadx-gui**.
 Now you are ready to find some juicy information by doing
 some mobile app reversing!! Whoop whoop!
+
+#### Task 5: Rebuild APK
+In many CTF tasks, you will have to do changes in the app code
+and then rebuild the app and run it again on the phone or 
+emulator. A common task is for instance to change the code so
+that you win thousand rounds of a game. In order to get the flag,
+you will have to rebuild the app, sign it and then install it 
+again.
+
+Make a change. It sdoes not matter what you do, just make sure
+the code is runnable. And then rebuild the app using **apktool**
+and **jarsigner**. Remember that you also need a keystore to sign
+the app. Make a keystore using **keytool**.
 
 ---
 
