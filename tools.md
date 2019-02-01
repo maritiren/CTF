@@ -19,7 +19,7 @@
 * #Disk/host analysis TODO
 
 ### Reverse Engineering
-* IDA: A nice tool for reverse engineering. Link to IDA download (Reverse engineering)
+* [IDA](https://www.hex-rays.com/products/ida/support/download.shtml): A nice tool for reverse engineering.
 * Terminal command: `strings`
 * [Online disassembler](https://onlinedisassembler.com/static/home/)
 
