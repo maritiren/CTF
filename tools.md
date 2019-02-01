@@ -19,6 +19,7 @@
 ### Reverse Engineering
 * IDA: A nice tool for reverse engineering. Link to IDA download (Reverse engineering)
 * Terminal command: `strings`
+* [Online disassembler](https://onlinedisassembler.com/static/home/)
 
 ### Pwn
 * gdb: GNU Debugger
