@@ -2,7 +2,9 @@
 
 ### Cryptography
 * Sagemath (crypto)
-* Python scripting
+* Python scripting: 
+  * [pycrypto](https://github.com/dlitz/pycrypto)
+  * [pwntools])(https://github.com/Gallopsled/pwntools)
 
 ### Web Security
 * DevTools in web browser: When in a website, open with `Ctrl+Shift+I`, `f12`, or right click on the page and select `Inspect`.
@@ -23,10 +25,10 @@
 
 ### Pwn
 * gdb: GNU Debugger
-* gdb-peda: Python plugin for gdb. [Follow this "How To"](###gdp-peda).
+* [gdb-peda](https://github.com/longld/peda): Makes the debugger nicer
 * Terminal command: `ltrace` for tracing library calls. Use the man page.
 * Terminal command: `strace` for tracing syscalls. Use the man page.
-* pwn-tools: Read [this "How To"](#pwn-tools).
+* [pwntools])(https://github.com/Gallopsled/pwntools)
 
 ### Steganography
 * [Audacity](https://www.audacityteam.org/), for sound files.
@@ -34,8 +36,9 @@
 * [Online spectrum analyzer](https://academo.org/demos/spectrum-analyzer/), for sound files.
 * [Stegsolve](https://github.com/zardus/ctf-tools/tree/master/stegsolve) for image files.
 
-## Misc
-- [z3](https://github.com/Z3Prover/z3): "Z3 is a theorem prover from Microsoft Research."
+### Misc
+* [z3](https://github.com/Z3Prover/z3): "Z3 is a theorem prover from Microsoft Research."
+* [pwntools])(https://github.com/Gallopsled/pwntools)
 
 
 ### Terminal tools
