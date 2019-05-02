@@ -41,8 +41,8 @@ the app. Make a keystore using **keytool**.
 ---
 
 ## Important note!
-In order to run you app properly, it requires a server to run.
-You must start the server of the InsecureBankv2 app. Do that by
+In order to run you app properly and get started with the tasks, 
+you must start the server of the InsecureBankv2 app. Do that by
 going to the `AndroLabServer` folder, and entering the following 
 commands (requires Python):
 
