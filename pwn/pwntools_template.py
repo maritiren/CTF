@@ -1,6 +1,6 @@
 from pwn import *
 
-# sett debug = True når man skal teste løsningen lokalt
+# set debug = True when testing locally
 debug = False
 if debug == True:
     r = process("./binary")
